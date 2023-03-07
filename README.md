@@ -28,9 +28,9 @@ Sample of the Food-For-Everyone application shown below in the screen shot
 
 ## Authors 
 
-edX bootcamps LLC
-Fady Khalil
-Lavell Juan 
+edX bootcamps LLC<br>
+Fady Khalil<br>
+Lavell Juan<br>
 Kyle Chu
 
 ## Credits 
