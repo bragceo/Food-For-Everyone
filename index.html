@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food For Everyone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-9AkDuJl/YrkLzPZqlBvJ4uH7V4ElprQsblNjkeYHb9XquxyS0/0D+h7o40CJdHcsbVn1n8tWcIdpCTzD05Xjg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-tfrF3ZQ+1bdw7kO8l5W5fYv0F+OfZysPd8VOBmZ62vUE/TrUKtEZ67HtjlEmUPJgYvY25ivXNfIbfM8jn1zPA==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Food For Everyone</h1>
+        <div class="field is-grouped">
+          <p class="control is-expanded">
+            <input class="input" type="text" placeholder="Enter a location">
+          </p>
+          <p class="control">
+            <button class="button is-info">
+              <span class="icon">
+                <i class="fas fa-search"></i>
+              </span>
+              <span>Search</span>
+            </button>
+          </p>
+        </div>
+        <hr>
+        <div class="columns">
+          <div class="column is-half">
+            <h2 class="subtitle">Results</h2>
+            <ul id="results-list"></ul>
+          </div>
+          <div class="column is-half">
+            <h2 class="subtitle">Selected Restaurant Details</h2>
+            <div id="restaurant-details"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./Assets/script.js"></script>
+     
+  </body>
+  </html>
+  
