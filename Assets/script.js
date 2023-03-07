@@ -6,7 +6,6 @@ const defaultRadius = 1609; // 1 mile in meters
 const spoonacularKey = '8c8d8ffa5e3b4633bde62c51888d6623';
 const spoonacularURL = 'https://api.spoonacular.com/recipes/findByIngredients';
 
-
 // DOM elements
 const form = document.querySelector('#search-form');
 const locationInput = document.querySelector('#location');
