@@ -34,7 +34,7 @@ Sample of the Food-For-Everyone application shown below in the screen shot
 edX bootcamps LLC<br>
 Fady Khalil<br>
 Lavell Juan<br>
-Kyle Chau
+Kyle Chaufixe
 
 ## Credits 
 
