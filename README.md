@@ -22,7 +22,7 @@ When I view my favorites list, then I should see the restaurant’s name and loc
 
 To acces the Food-For-Everyone application site please click [here]()
 
-## Screenshot of the password generator 
+## Screenshot of the Food-For-Everyone 
 Sample of the Food-For-Everyone application shown below in the screen shot 
 ![]()
 
