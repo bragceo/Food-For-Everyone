@@ -13,28 +13,25 @@
     <section class="section">
       <div class="container">
         <h1 class="title">Food For Everyone</h1>
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="Enter a location">
-          </p>
-          <p class="control">
-            <button class="button is-info">
-              <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-              <span>Search</span>
-            </button>
-          </p>
-        </div>
-        <hr>
-        <div class="columns">
-          <div class="column is-half">
-            <h2 class="subtitle">Results</h2>
-            <ul id="results-list"></ul>
+        <form id="search-form">
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input class="input" type="text" placeholder="Enter a location" id="location">
+            </p>
+            <p class="control">
+              <button class="button is-info" type="submit">Search</button>
+            </p>
           </div>
-          <div class="column is-half">
-            <h2 class="subtitle">Selected Restaurant Details</h2>
-            <div id="restaurant-details"></div>
+          <div class="field">
+            <label class="label">Search Radius (meters)</label>
+            <input class="input" type="number" placeholder="1609" id="radius">
+          </div>
+          <div class="field">
+            <label class="label">Allergies (comma-separated)</label>
+            <input class="input" type="text" placeholder="e.g. peanuts, dairy, gluten" id="allergies">
+          </div>
+        </form>
+        <ul id="results-list"></ul>
           </div>
         </div>
       </div>
