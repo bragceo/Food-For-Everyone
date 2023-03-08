@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="/Assets/reset.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css">
-  <link rel="stylesheet" href="./Assets/style.css">
-  
+ <meta charset="UTF-8">
+ <title>Food For Everyone</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+   integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="script.js" defer></script>
 </head>
+
+
 <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title firsthead">Food For Everyone</h1>
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="Enter a location">
-          </p>
-          <p class="control">
-            <button class="button is-info">
-              <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-              <span>Search</span>
-            </button>
-          </p>
-        </div>
-        <hr>
-        <div class="columns">
-          <div class="column is-half">
-            <h2 class="subtitle">Results</h2>
-            <ul id="results-list"></ul>
-        <h1 class="title">Find your location !</h1>
-        <form id="search-form">
-          <div class="field is-grouped">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Enter a location" id="location">
-            </p>
-            <p class="control">
-              <button class="button is-info" type="submit">Search</button>
-            </p>
-          </div>
-          <div class="field">
-            <label class="label">Search Radius (meters)</label>
-            <input class="input" type="number" placeholder="1609" id="radius">
-          </div>
-          <div class="field">
-            <label class="label">Allergies (comma-separated)</label>
-            <input class="input" type="text" placeholder="e.g. peanuts, dairy, gluten" id="allergies">
-          </div>
-        </form>
-        <ul id="results-list"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-     
-  </body>
-  </html>
+ <section class="section">
+   <div class="container pt-5">
+     <h1 class="title has-text-centered is-size-1 has-text-success">Food For Everyone</h1>
+     <h2 class="subtitle has-text-centered pt-4">Find food that fits your dietary needs</h2>
+     <form id="search-form" class="has-text-centered py-5">
+       <div class="field is-grouped is-justify-content-center is-flex-wrap-wrap">
+         <p class="control m-2">
+           <input class="input is-success" type="text" placeholder="Enter a location" id="location">
+         </p>
+         <p class="control m-2">
+           <input class="input is-success" type="number" placeholder="Radius" id="radius">
+         </p>
+
+
+         <p class="control m-2">
+           <input class="input is-success" type="text" placeholder="Allergies e.g. peanuts, dairy, gluten"
+             id="allergies">
+         </p>
+
+
+         <p class="control m-2">
+           <button class="button is-success" type="submit">Search</button>
+         </p>
+       </div>
+     </form>
+     <div id="results-list" class="is-flex is-flex-wrap-wrap is-justify-content-center"></div>
+     <div id="place-info" class="is-hidden has-text-centered card p-4 m-auto" style="width: fit-content;">
+     </div>
+     <div class="menu-list-container is-hidden has-text-centered">
+       <div id="menu-list" class="has-text-centered p-4 m-auto is-flex is-flex-wrap-wrap is-justify-content-center"
+         style="width: fit-content;"></div>
+       <button class="back-btn button is-success is-outlined mt-3">Back</button>
+     </div>
+   </div>
+ </section>
+</body>
+
+
+</html>
   
