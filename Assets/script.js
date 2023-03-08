@@ -7,7 +7,7 @@ const spoonacularKey = '8c8d8ffa5e3b4633bde62c51888d6623';
 const spoonacularURL = 'https://api.spoonacular.com/recipes/findByIngredients';
 
 // DOM elements
-const form = document.querySelector('#search-form');
+const searchButton = document.getElementById('search-form');
 const locationInput = document.querySelector('#location');
 const radiusInput = document.querySelector('#radius');
 const allergiesInput = document.querySelector('#allergies');
@@ -182,8 +182,9 @@ function renderMenuItems(menuItems) {
 
 
 // Event listener for search form submission
-form.addEventListener('submit', async (e) => {
- e.preventDefault();
+searchButton.addEventListener('click', async (e) => {
+  console.trace();
+  e.preventDefault();
  const location = locationInput.value || defaultLocation;
  const radius = radiusInput.value || defaultRadius;
  const allergies = allergiesInput.value.split(',').map(allergy => allergy.trim());
@@ -198,6 +199,7 @@ resultsList.addEventListener('click', async (e) => {
    const restaurantId = e.target.dataset.id;
    const menuItems = await getMenuItems(restaurantId, allergiesInput.value.split(',').map(allergy => allergy.trim()));
    renderMenuItems(menuItems);
+   searchYelp();
  }
 });
 
@@ -223,4 +225,4 @@ menuListContainer.addEventListener('click', (e) => {
    placeInfo.classList.remove('is-hidden');
  }
 });
-
+console.trace();
