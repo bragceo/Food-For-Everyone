@@ -18,6 +18,7 @@ const menuListContainer = document.querySelector('.menu-list-container');
 
 
 // Function to handle Yelp API request
+/*
 async function getRestaurants(location, radius, allergies) {
  const response = await fetch(`${apiURL}?location=${location}&radius=${radius}&categories=restaurants&term=${allergies.join(' ')}&sort_by=rating&limit=10`, {
    method: 'GET',
@@ -27,7 +28,55 @@ async function getRestaurants(location, radius, allergies) {
    }
  });
  const data = await response.json();
- return data.businesses;
+ //return data.businesses;
+ return data;
+}
+*/
+
+async function geoCode(location) {
+  let geoCodeUrl = "";
+  const response = await fetch(`${geoCodeUrl}`)
+
+  const data = await response.json();
+  let lat = data.lat;
+  let long = data.long;
+
+  const yelpResponse = await fetch(`${apiURL}?latitude=${lat}&longitude=${long}`)
+  getRestaurants(lat, long, radiu)
+} 
+
+async function getRestaurants(location, radius, allergies) {
+ const response = await fetch(`${apiURL}?latitude=37.786882&longitude=-122.399972&term=${allergies}`, {
+   method: 'GET',
+   headers: {
+     'accept': 'application/json',
+     'Authorization': `Bearer ${apiKey}`
+   }
+ });
+ const data = await response.json();
+
+ console.log("Data: ", data)
+
+ // we would need loop through the returned data ARRAY
+ for(let i = 0; i < data.length; i++) {
+  console.log("NAme: ", data.businesses[i].name);
+  console.log("id: ", data.businesses[i].id);
+ }
+ //return data.businesses;
+
+ let testId =  data.businesses[0].id;
+ console.log("ID: ", testId);
+ let businesseResponse = await fetch(`https://corsproxy.io/?https://api.yelp.com/v3/businesses/${testId}`, {
+  method: 'GET',
+  headers: {
+    'accept': 'application/json',
+    'Authorization': `Bearer ${apiKey}`
+  }});
+
+ let businessData = await businesseResponse.json();
+ console.log(businessData);
+
+ return data;
 }
 
 
