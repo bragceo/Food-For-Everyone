@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
- <meta charset="UTF-8">
- <title>Food For Everyone</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-   integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
- <script src="./Assets/script.js" defer ></script>
+  <meta charset="UTF-8">
+  <title>Food For Everyone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="" defer></script>
+  <script src="script.js" defer></script>
 </head>
 
-
 <body>
- <section class="section">
-   <div class="container pt-5">
-     <h1 class="title has-text-centered is-size-1 has-text-success">Food For Everyone</h1>
-     <h2 class="subtitle has-text-centered pt-4">Find food that fits your dietary needs</h2>
-     <form  class="has-text-centered py-5">
-       <div class="field is-grouped is-justify-content-center is-flex-wrap-wrap">
-         <p class="control m-2">
-           <input class="input is-success" type="text" placeholder="Enter a location" id="location">
-         </p>
-         <p class="control m-2">
-           <input class="input is-success" type="number" placeholder="Radius" id="radius">
-         </p>
+  <section class="section">
+    <div class="container pt-5">
+      <h1 class="title has-text-centered is-size-1 has-text-success">Food For Everyone</h1>
+      <h2 class="subtitle has-text-centered pt-4">Find food that fits your dietary needs</h2>
+      <form id="search-form" class="has-text-centered py-5">
+        <div class="field is-grouped is-justify-content-center is-flex-wrap-wrap">
+          <p class="control m-2">
+            <input class="input is-success" type="text" placeholder="Enter Post Code" id="location">
+          </p>
+          <p class="control m-2">
+            <input class="input is-success" type="number" placeholder="Radius" id="radius">
+          </p>
 
+          <p class="control m-2">
+            <input class="input is-success" type="text" placeholder="Allergies e.g. peanuts, dairy, gluten"
+              id="allergies">
+          </p>
 
-         <p class="control m-2">
-           <input class="input is-success" type="text" placeholder="Allergies e.g. peanuts, dairy, gluten"
-             id="allergies">
-         </p>
-
-
-         <p class="control m-2">
-           <button id="search-form" class="button is-success" type="submit">Search</button>
-         </p>
-       </div>
-     </form>
-     <div id="results-list" class="is-flex is-flex-wrap-wrap is-justify-content-center"></div>
-     <div id="place-info" class="is-hidden has-text-centered card p-4 m-auto" style="width: fit-content;">
-     </div>
-     <div class="menu-list-container is-hidden has-text-centered">
-       <div id="menu-list" class="has-text-centered p-4 m-auto is-flex is-flex-wrap-wrap is-justify-content-center"
-         style="width: fit-content;"></div>
-       <button class="back-btn button is-success is-outlined mt-3">Back</button>
-     </div>
-   </div>
- </section>
+          <p class="control m-2">
+            <button class="button is-success" type="submit">Search</button>
+          </p>
+        </div>
+      </form>
+      <div id="results-list" class="is-flex is-flex-wrap-wrap is-justify-content-center"></div>
+      <div id="place-info" class="is-hidden has-text-centered card p-4 m-auto" style="width: fit-content;">
+      </div>
+      <div class="menu-list-container is-hidden has-text-centered">
+        <div id="menu-list"
+          class="has-text-centered p-4 m-auto is-flex is-flex-wrap-wrap is-justify-content-center is-flex-direction-column"
+          style="width: fit-content;"></div>
+        <button class="back-btn button is-success is-outlined mt-3">Back</button>
+      </div>
+    </div>
+  </section>
 </body>
 
-
 </html>
-  
