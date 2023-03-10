@@ -1,3 +1,6 @@
+body{
+  background: blue;
+}
 div.container h1.firsthead{
     margin-left: 500px;
     font-family: 'Times New Roman', Times, serif;
