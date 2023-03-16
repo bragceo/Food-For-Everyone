@@ -143,6 +143,8 @@ function renderResults(results) {
 
 // Function to render menu items
 function renderMenuItems(menuItems) {
+  console.log("Menu Items: ", menuItems);
+
   menuList.innerHTML = '';
   if (menuItems.length === 0) {
     menuList.innerHTML = '<p>No menu items found</p>';
@@ -162,6 +164,7 @@ function renderMenuItems(menuItems) {
 
       menuItem.menu_items.forEach(item => {
         let userAllergens = allergiesInput.value.split(',');
+
         let allergenPresent = false;
         userAllergens.forEach(allergen => {
           if (item.menu_item_allergy_information_allergens && (item.menu_item_allergy_information_allergens).lower().includes(allergen.lower())) {
@@ -174,9 +177,26 @@ function renderMenuItems(menuItems) {
           }
 
         })
-        
 
-       
+      //   const filteredMenus = menus.filter(item => {
+      //     let allergenPresent = false;
+      
+      //     const menu_groups = item.menu_groups;
+      //     menu_groups.forEach(group => {
+      //         const items = group.menu_items;
+      //         items.forEach(food => {
+      //             if(food.menu_item_allergy_information.includes(allergies.join(""))) {
+      //                 allergenPresent = true;
+      //             }
+      //         })
+      //     })
+      
+      //     return !allergenPresent;
+      //   })
+      
+      //   return filteredMenus;
+      // }
+        
 
         if (!allergenPresent) {
           const menuItemItem = document.createElement('div');
@@ -221,7 +241,9 @@ form.addEventListener('submit', async (e) => {
 resultsList.addEventListener('click', async (e) => {
   if (e.target.classList.contains('menu-btn')) {
     const restaurantId = e.target.dataset.id;
-    const menuItems = await getMenuItems(restaurantId, allergiesInput.value.split(',').map(allergy => allergy.trim()));
+    //const menuItems = await getMenuItems(restaurantId, allergiesInput.value.split(',').map(allergy => allergy.trim()));
+    const menuItems = await getMenuItems(restaurantId);
+    //const allergiesArr = allergiesInput.value.split(',').map(allergy => allergy.trim())
     renderMenuItems(menuItems);
   }
 });
