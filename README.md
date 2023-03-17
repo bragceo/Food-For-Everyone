@@ -67,7 +67,7 @@ The JavaScript code listens for various user events on the webpage, such as form
 
 ## Screenshot of the Food-For-Everyone 
 Sample of the Food-For-Everyone application shown below in the screen shot 
-![]()
+![Screenshot-Of-FoodForEveryone](./Foodforeveryone.jpg)
 
 ## Authors 
 
