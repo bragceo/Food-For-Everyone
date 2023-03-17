@@ -29,7 +29,7 @@ When I view my favorites list, then I should see the restaurant’s name and loc
 
 ## Deployed URL
 
-To acces the Food-For-Everyone application site please click [here]()
+To acces the Food-For-Everyone application site please click [here](https://whirlwindraven.github.io/Food-For-Everyone/)
 
 ## How the Code Works
 
@@ -67,7 +67,7 @@ The JavaScript code listens for various user events on the webpage, such as form
 
 ## Screenshot of the Food-For-Everyone 
 Sample of the Food-For-Everyone application shown below in the screen shot 
-![]()
+![Screenshot-Of-FoodForEveryone](./Foodforeveryone.jpg)
 
 ## Authors 
 
