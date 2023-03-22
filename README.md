@@ -76,7 +76,7 @@ https://user-images.githubusercontent.com/119948453/226770385-c9ac2b99-f346-4771
 
 ## Special Thanks 
 
-Shout out to the awesome Instrcutors and TAs who worked with us through numerous challenges. These indiviudals include: Diego, Enrique Gomes, Andrew Finkernagel, and Erik Hoverstein. 
+Shout out to the awesome Instructors and TAs who worked with us through numerous challenges. These indiviudals include: Diego, Enrique Gomes, Andrew Finkernagel, and Erik Hoverstein. 
 
 
 
